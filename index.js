@@ -39,6 +39,10 @@ express.get("/", async (req, res) => {
     res.sendFile('index.html');
 })
 
+express.get("/VersionRequest", (req, res)=>{
+    res.status(200).end();
+})
+
 express.get("/clearitemsforshop", async (req, res) => {
     res.set("Content-Type", "text/plain");
 
