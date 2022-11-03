@@ -40,7 +40,9 @@ express.get("/", async (req, res) => {
 })
 
 express.get("/VersionRequest", async (req, res)=>{
-    return res.status(200).end();
+    res.json({
+        "type": "Release 1.0"
+    })
 })
 
 express.get("/clearitemsforshop", async (req, res) => {
