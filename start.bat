@@ -1,5 +1,5 @@
 @echo off
-title Era Backend for old versions (LawinServer)
+title Era Backend f0r old versions (LawinServer)
 :restart
 node index.js
 pause
