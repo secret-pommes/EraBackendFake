@@ -32,17 +32,17 @@ express.use(Express.urlencoded({
 }));
 express.use(Express.static('public'));
 
-const port = process.env.PORT || 3551;
+const port = process.env.PORT || 80;
 express.listen(port, console.log("Started listening on port", port));
 
 express.get("/", async (req, res) => {
     res.sendFile('index.html');
 })
 
+
+var eraversion = "1.0" // put the release in here for example: if you have Release 1.0 type in 1.0
 express.get("/VersionRequest", async (req, res)=>{
-    res.json({
-        "type": "Release 1.0"
-    })
+    res.send(eraversion)
 })
 
 express.get("/clearitemsforshop", async (req, res) => {
